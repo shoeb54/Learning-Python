@@ -1,2 +1,3 @@
 # Learning-Python
-It is to code in Python 3
+It is to code in Python 3. 
+Better be connected with us:3
