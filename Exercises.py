@@ -42,7 +42,7 @@ elif operator == "%":
 else:
     print("Go liitle monkey, jump on the bed!")
 
-# Python Weight Converter
+#Ex04 Python Weight Converter
 
 def kg_to_pounds(kg):
     return kg * 2.20462
@@ -66,7 +66,7 @@ else:
     print("Invalid choice. Please enter 1 or 2.")
 
 
-# Temperature mapping Code 
+#Ex05 Temperature mapping Code 
 
 def celsius_to_fahrenheit(c):
     return (c * 9/5) + 32
