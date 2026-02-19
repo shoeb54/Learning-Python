@@ -20,7 +20,4 @@ Here on this repository, I’m documenting my code, experiments, and little proj
 ## 🔗 Connect With Me
 
 - GitHub: [shoeb54](https://github.com/shoeb54)  
-- Email: shoebzaman1999@gmai.com  
-
-
-
+- Email: shoebzaman1999@gmail.com  
