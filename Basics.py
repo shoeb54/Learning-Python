@@ -1,6 +1,5 @@
 # =================================================================
 # COMPREHENSIVE PYTHON TUTORIAL
-# Covers Topics #1 to #74 (Tutorials Only)
 # =================================================================
 
 import math
@@ -10,7 +9,7 @@ import threading
 import os
 
 # ---------------------------------------------------------
-# 1. BASICS: VARIABLES, INPUT, & TYPE CASTING (#1 - #4)
+# 1. BASICS: VARIABLES, INPUT, & TYPE CASTING 
 # ---------------------------------------------------------
 
 # Printing and Strings
@@ -31,7 +30,7 @@ name = input("Enter your name: ")
 age = int(input("Enter your age: "))
 
 # ---------------------------------------------------------
-# 2. MATH & ARITHMETIC (#6)
+# 2. MATH & ARITHMETIC 
 # ---------------------------------------------------------
 
 friends = 5
@@ -45,7 +44,7 @@ print(pow(2, 3))      # Power
 print(math.sqrt(64))  # Square root
 
 # ---------------------------------------------------------
-# 3. CONDITIONALS & LOGIC (#7, #11, #12, #38)
+# 3. CONDITIONALS & LOGIC 
 # ---------------------------------------------------------
 
 # If Statements
@@ -73,7 +72,7 @@ match day:
     case _: print("Invalid day")
 
 # ---------------------------------------------------------
-# 4. STRING MANIPULATION (#13 - #15)
+# 4. STRING MANIPULATION 
 # ---------------------------------------------------------
 
 # String Methods
@@ -93,7 +92,7 @@ print(f"Price is ${price:.2f}") # 3.14
 print(f"Price is {price:10}")   # padding
 
 # ---------------------------------------------------------
-# 5. LOOPS (#16, #18, #20)
+# 5. LOOPS 
 # ---------------------------------------------------------
 
 # While Loop
@@ -113,7 +112,7 @@ for i in range(rows):
     print()
 
 # ---------------------------------------------------------
-# 6. COLLECTIONS (#21, #23, #25, #35, #37)
+# 6. COLLECTIONS 
 # ---------------------------------------------------------
 
 # Lists (Ordered, changeable)
@@ -137,7 +136,7 @@ print(capitals.get("USA"))
 doubles = [x * 2 for x in range(1, 6)] # [2, 4, 6, 8, 10]
 
 # ---------------------------------------------------------
-# 7. FUNCTIONS & SCOPE (#31 - #34, #40, #41)
+# 7. FUNCTIONS & SCOPE 
 # ---------------------------------------------------------
 
 def hello(name, count=1): # Default argument
@@ -158,7 +157,7 @@ def print_address(**kwargs):
 # if __name__ == '__main__': (Ensures script runs only if executed directly)
 
 # ---------------------------------------------------------
-# 8. OBJECT ORIENTED PROGRAMMING (#46 - #57)
+# 8. OBJECT ORIENTED PROGRAMMING 
 # ---------------------------------------------------------
 
 class Animal:
@@ -189,7 +188,7 @@ class Rectangle:
         return self._width
 
 # ---------------------------------------------------------
-# 9. ADVANCED TOPICS (#58 - #65)
+# 9. ADVANCED TOPICS 
 # ---------------------------------------------------------
 
 # Exception Handling
@@ -214,13 +213,3 @@ def task():
     print("Task running")
 x = threading.Thread(target=task)
 x.start()
-
-# ---------------------------------------------------------
-# 10. GUI INTRO (PyQt5) (#66 - #74)
-# ---------------------------------------------------------
-# (Conceptual logic as PyQt5 requires installation)
-# 1. Initialize QApplication
-# 2. Create QWidget/QMainWindow
-# 3. Add Labels, Buttons, Layouts (QVBoxLayout/QHBoxLayout)
-# 4. Connect signals (clicks) to slots (functions)
-# 5. Show window and execute app.exec_()

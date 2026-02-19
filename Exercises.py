@@ -2,7 +2,7 @@
 # PYTHON PROJECTS (SEQUENTIAL)
 # =================================================================
 
-# ⭐ #5: Madlibs Game
+# ⭐ Madlibs Game
 # ---------------------------------------------------------
 print("--- Madlibs Game ---")
 adjective1 = input("Enter an adjective: ")
@@ -15,7 +15,7 @@ print(f"In an exhibit, I saw a {noun}.")
 print(f"{noun} was {adjective2} and {verb}ing.")
 
 
-# ⭐ #17: Compound Interest Calculator
+# ⭐ Compound Interest Calculator
 # ---------------------------------------------------------
 print("--- Compound Interest Calculator ---")
 principle = float(input("Enter the principle amount: "))
@@ -28,7 +28,7 @@ total_amount = principle * pow((1 + rate / 100), time)
 print(f"Balance after {time} year/s: ${total_amount:.2f}")
 
 
-# ⭐ #19: Countdown Timer Program
+# ⭐ Countdown Timer Program
 # ---------------------------------------------------------
 import time
 
@@ -45,7 +45,7 @@ for x in range(seconds, 0, -1):
 print("TIME'S UP!")
 
 
-# ⭐ #22: Shopping Cart Program (Advanced)
+# ⭐ Shopping Cart Program (Advanced)
 # ---------------------------------------------------------
 foods = []
 prices = []
@@ -70,7 +70,7 @@ for price in prices:
 print(f"\nYour total is: ${total:.2f}")
 
 
-# ⭐ #24: Quiz Game
+# ⭐ Quiz Game
 # ---------------------------------------------------------
 questions = ("How many elements are in the periodic table?: ",
              "Which animal lays the largest eggs?: ",
@@ -104,7 +104,7 @@ for question in questions:
 print(f"Your score is: {int(score / len(questions) * 100)}%")
 
 
-# ⭐ #26: Concession Stand Program
+# ⭐ Concession Stand Program
 # ---------------------------------------------------------
 menu = {"pizza": 3.00, "nachos": 4.50, "popcorn": 6.00, "soda": 2.00}
 cart = []
@@ -128,7 +128,7 @@ for food in cart:
 print(f"\nTotal is: ${total:.2f}")
 
 
-# ⭐ #28: Number Guessing Game
+# ⭐ Number Guessing Game
 # ---------------------------------------------------------
 import random
 
@@ -157,7 +157,7 @@ while is_running:
         print("Invalid guess")
 
 
-# ⭐ #42: Banking Program
+# ⭐ Banking Program
 # ---------------------------------------------------------
 def show_balance(balance):
     print(f"Your balance is ${balance:.2f}")
