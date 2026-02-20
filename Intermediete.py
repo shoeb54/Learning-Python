@@ -1,6 +1,4 @@
 """
-Mini Machine Learning Foundation Project
------------------------------------------
 This script demonstrates:
 
 - File handling (CSV)
