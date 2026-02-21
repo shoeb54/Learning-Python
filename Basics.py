@@ -1,6 +1,6 @@
-# =================================================================
-# COMPREHENSIVE PYTHON TUTORIAL
-# =================================================================
+# ============================================================
+# COMPREHENSIVE PYTHON MASTER SCRIPT
+# ============================================================
 
 import math
 import random
@@ -8,208 +8,264 @@ import datetime
 import threading
 import os
 
-# ---------------------------------------------------------
-# 1. BASICS: VARIABLES, INPUT, & TYPE CASTING 
-# ---------------------------------------------------------
 
-# Printing and Strings
-print("Hello World!") 
+# ============================================================
+# 1️⃣ BASICS: VARIABLES, INPUT, TYPE CASTING
+# ============================================================
 
-# Variables (Strings, Integers, Floats, Booleans)
-name = "Bro"          # string
+print("Hello World!")
+
+# Primitive Data Types
+name = "Bro"          # str
 age = 21              # int
 gpa = 3.4             # float
-is_student = True     # boolean
+is_student = True     # bool
 
-# Type Casting (Converting types)
-gpa = int(gpa)        # 3.4 becomes 3
-age = str(age)        # 21 becomes "21"
+# Type Casting
+gpa = int(gpa)        # 3
+age = str(age)        # "21"
 
-# User Input (Always returns a string)
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))
+# User Input (always string)
+# name = input("Enter your name: ")
+# age = int(input("Enter your age: "))
 
-# ---------------------------------------------------------
-# 2. MATH & ARITHMETIC 
-# ---------------------------------------------------------
+
+# ============================================================
+# 2️⃣ MATH & ARITHMETIC
+# ============================================================
 
 friends = 5
-friends += 1          # Addition (6)
-friends **= 2         # Exponent (36)
-remainder = friends % 5 # Modulus (1)
+friends += 1          # 6
+friends **= 2         # 36
+remainder = friends % 5
 
-print(round(3.14))    # Rounding
-print(abs(-5))        # Absolute value
-print(pow(2, 3))      # Power
-print(math.sqrt(64))  # Square root
+print(round(3.14159))
+print(abs(-5))
+print(pow(2, 3))
+print(math.sqrt(64))
+print(math.factorial(5))
+print(math.log(10))
 
-# ---------------------------------------------------------
-# 3. CONDITIONALS & LOGIC 
-# ---------------------------------------------------------
 
-# If Statements
+# ============================================================
+# 3️⃣ CONDITIONALS & LOGIC
+# ============================================================
+
+age = 20
+
 if age >= 100:
-    print("You are too old!")
+    print("Too old!")
 elif age >= 18:
-    print("You are signed up!")
+    print("Adult")
 else:
-    print("Too young!")
+    print("Minor")
 
-# Logical Operators (and, or, not)
 temp = 25
-if temp > 0 and temp < 30:
-    print("The weather is good")
+if 0 < temp < 30:
+    print("Weather is good")
 
-# Conditional Expression (Ternary Operator)
-# X if condition else Y
 status = "Adult" if age >= 18 else "Child"
 
-# Match-Case (Python 3.10+)
 day = "Monday"
 match day:
-    case "Monday": print("Start of week")
-    case "Friday": print("Weekend soon")
-    case _: print("Invalid day")
+    case "Monday":
+        print("Start of week")
+    case "Friday":
+        print("Weekend soon")
+    case _:
+        print("Invalid day")
 
-# ---------------------------------------------------------
-# 4. STRING MANIPULATION 
-# ---------------------------------------------------------
 
-# String Methods
+# ============================================================
+# 4️⃣ STRING MANIPULATION
+# ============================================================
+
 name = "Bro Code"
-print(name.upper())     # BRO CODE
-print(name.isdigit())   # False
-print(name.replace("o", "a")) # Bra Cade
+print(name.upper())
+print(name.replace("o", "a"))
+print(name.isdigit())
 
-# Indexing [start:end:step]
-phone_number = "123-456-7890"
-area_code = phone_number[0:3]
-last_digits = phone_number[-4:]
+phone = "123-456-7890"
+area_code = phone[:3]
+last_digits = phone[-4:]
 
-# Format Specifiers {value:flags}
 price = 3.14159
-print(f"Price is ${price:.2f}") # 3.14
-print(f"Price is {price:10}")   # padding
+print(f"Price: ${price:.2f}")
 
-# ---------------------------------------------------------
-# 5. LOOPS 
-# ---------------------------------------------------------
 
-# While Loop
-while name == "":
-    name = input("Enter name: ")
+# ============================================================
+# 5️⃣ LOOPS
+# ============================================================
 
-# For Loop (Iterating over a range or sequence)
-for i in range(1, 11, 2): # start, stop, step
+for i in range(1, 11, 2):
     print(i)
 
-# Nested Loops
-rows = 2
-columns = 3
+rows, cols = 2, 3
 for i in range(rows):
-    for j in range(columns):
+    for j in range(cols):
         print("*", end="")
     print()
 
-# ---------------------------------------------------------
-# 6. COLLECTIONS 
-# ---------------------------------------------------------
+count = 0
+while count < 3:
+    print("Count:", count)
+    count += 1
 
-# Lists (Ordered, changeable)
+
+# ============================================================
+# 6️⃣ COLLECTIONS
+# ============================================================
+
+# List
 fruits = ["apple", "orange", "banana"]
 fruits.append("pineapple")
 
-# Sets (Unordered, unique)
+# Set
 colors = {"red", "green", "blue"}
 
-# Tuples (Ordered, unchangeable)
+# Tuple
 coordinates = (10, 20)
 
-# 2D Collections
-grid = [[1, 2, 3], [4, 5, 6]]
-
-# Dictionaries (Key:Value pairs)
+# Dictionary
 capitals = {"USA": "Washington D.C.", "India": "New Delhi"}
 print(capitals.get("USA"))
 
-# List Comprehensions
-doubles = [x * 2 for x in range(1, 6)] # [2, 4, 6, 8, 10]
+# 2D List
+grid = [[1, 2, 3], [4, 5, 6]]
 
-# ---------------------------------------------------------
-# 7. FUNCTIONS & SCOPE 
-# ---------------------------------------------------------
+# List Comprehension
+doubles = [x * 2 for x in range(1, 6)]
+even_squares = [x**2 for x in range(10) if x % 2 == 0]
 
-def hello(name, count=1): # Default argument
-    global x # Global scope
+
+# ============================================================
+# 7️⃣ FUNCTIONS & ADVANCED FUNCTION FEATURES
+# ============================================================
+
+def hello(name, count=1):
     for _ in range(count):
         print(f"Hello {name}")
 
-# *args (Tuple of arguments)
-def add(*nums):
+def add(*nums):  # *args
     return sum(nums)
 
-# **kwargs (Dictionary of arguments)
-def print_address(**kwargs):
-    for value in kwargs.values():
-        print(value)
+def print_address(**kwargs):  # **kwargs
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
 
-# Scope Resolution (LEGB: Local, Enclosing, Global, Built-in)
-# if __name__ == '__main__': (Ensures script runs only if executed directly)
+# Lambda
+square = lambda x: x**2
+print(square(5))
 
-# ---------------------------------------------------------
-# 8. OBJECT ORIENTED PROGRAMMING 
-# ---------------------------------------------------------
+# map, filter
+nums = [1, 2, 3, 4, 5]
+print(list(map(lambda x: x * 2, nums)))
+print(list(filter(lambda x: x % 2 == 0, nums)))
+
+# Scope Example (LEGB)
+x = 10
+def scope_test():
+    x = 5  # local
+    print("Local x:", x)
+
+scope_test()
+print("Global x:", x)
+
+
+# ============================================================
+# 8️⃣ OBJECT ORIENTED PROGRAMMING
+# ============================================================
 
 class Animal:
-    alive = True # Class variable
+    alive = True  # class variable
 
     def __init__(self, name):
-        self.name = name # Instance variable
+        self.name = name
 
     def eat(self):
         print(f"{self.name} is eating")
 
-class Dog(Animal): # Inheritance
+class Dog(Animal):
     def speak(self):
         print("Woof!")
 
-# super(), Static methods, and Class methods
+dog = Dog("Buddy")
+dog.eat()
+dog.speak()
+
+# Static Method
 class Employee:
     @staticmethod
-    def is_workday(day): # No 'self' needed
+    def is_workday(day):
         return day.weekday() < 5
 
-# @property (Getters/Setters)
+today = datetime.datetime.now()
+print("Is workday:", Employee.is_workday(today))
+
+# Property Decorator
 class Rectangle:
     def __init__(self, width):
         self._width = width
+
     @property
     def width(self):
         return self._width
 
-# ---------------------------------------------------------
-# 9. ADVANCED TOPICS 
-# ---------------------------------------------------------
+rect = Rectangle(10)
+print("Rectangle width:", rect.width)
 
-# Exception Handling
+
+# ============================================================
+# 9️⃣ EXCEPTION HANDLING
+# ============================================================
+
 try:
-    number = int(input("Enter a number: "))
+    number = 5  # change to 0 to test
     print(1 / number)
 except ZeroDivisionError:
-    print("Can't divide by zero")
+    print("Cannot divide by zero")
 except Exception as e:
-    print(e)
+    print("Error:", e)
+finally:
+    print("Execution completed")
 
-# File Handling
-if os.path.exists("test.txt"):
-    with open("test.txt", "r") as file:
+
+# ============================================================
+# 🔟 FILE HANDLING
+# ============================================================
+
+filename = "test.txt"
+
+if os.path.exists(filename):
+    with open(filename, "r") as file:
         print(file.read())
 else:
-    with open("test.txt", "w") as file:
+    with open(filename, "w") as file:
         file.write("Hello File!")
 
-# Multithreading
+# ============================================================
+# 1️⃣1️⃣ MULTITHREADING
+# ============================================================
+
 def task():
     print("Task running")
-x = threading.Thread(target=task)
-x.start()
+
+thread = threading.Thread(target=task)
+thread.start()
+thread.join()  # Wait for thread to finish
+
+
+# ============================================================
+# 1️⃣2️⃣ RANDOM & DATETIME
+# ============================================================
+
+print("Random number:", random.randint(1, 10))
+print("Current time:", datetime.datetime.now())
+
+
+# ============================================================
+# 1️⃣3️⃣ ENTRY POINT (BEST PRACTICE)
+# ============================================================
+
+if __name__ == "__main__":
+    print("Script executed directly.")
